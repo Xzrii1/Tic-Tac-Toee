@@ -69,6 +69,12 @@ function updateScore() {
   oScore.textContent = score.O;
 }
 
+function playSound(soundElement) {
+  const clone = soundElement.cloneNode();
+  clone.currentTime = 0;
+  clone.play();
+}
+
 function resetGame() {
   turn = "X";
   gameOver = false;
