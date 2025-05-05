@@ -48,7 +48,8 @@ function checkWin() {
       cells[a].textContent === cells[c].textContent
     ) {
       gameOver = true;
-      winSound.play();
+      const clickClone = clickSound.cloneNode();
+      clickClone.play();
       cells[a].style.background = cells[b].style.background = cells[c].style.background = "#a2f2a2";
       statusText.textContent = `${cells[a].textContent} Wins!`;
       score[cells[a].textContent]++;
